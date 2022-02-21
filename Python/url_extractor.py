@@ -31,9 +31,9 @@ def url_extract():
     is saved in the raw_data/ directory.
     """
     
-    file = open("raw_data/chat_data.txt", encoding = "utf8")
+    file = open("data/chat_data.txt", encoding = "utf8")
 
-    last_date = open("raw_data/latest_date.txt", encoding = "utf8")
+    last_date = open("data/latest_date.txt", encoding = "utf8")
 
     print("Reading whatsapp data\n")
     
@@ -89,7 +89,7 @@ def url_extract():
 
         print("Updating latest date..\n")
         
-        with open('raw_data/latest_date.txt', 'w') as f:
+        with open('data/latest_date.txt', 'w') as f:
             f.write(str(latest_date))
 
         pattern = r"(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)"
