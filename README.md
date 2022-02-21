@@ -4,13 +4,13 @@ This repo contains codes developed in **R** and **Python** for extracting URLs s
 
 After cloning this repo, make sure to create a new folder called "**data**" to store the exported WhatsApp chat data (**chat_data**) and to also store the time the last chat was sent. (**last_date**). All .**txt** files
 
-![](C:/Users/Admin/AppData/Local/RStudio/tmp/paste-2C5C306A.png)
+![](data_setup.png)
 
 Write a date to filter by in the last_date.txt file. If it is the first time you are running this, use a date that is before the earliest date. For example, if the earliest date in your chat history is **2020-04-12 09:34:21,** input a date earlier than that in the last_date.txt file.
 
 The last_date.txt looks like this.
 
-![](C:/Users/Admin/AppData/Local/RStudio/tmp/paste-9CE5EFBD.png)
+![](late_date_setup.png)
 
 ## Instructions for Python
 
