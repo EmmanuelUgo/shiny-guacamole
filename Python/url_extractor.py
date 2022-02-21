@@ -18,9 +18,9 @@ def prepare_data():
 
 
 
-    file = open("raw_data/chat_data.txt", encoding = "utf8")
+    file = open("data/chat_data.txt", encoding = "utf8")
 
-    last_date = open("raw_data/latest_date.txt", encoding = "utf8")
+    last_date = open("data/latest_date.txt", encoding = "utf8")
 
     print("Reading whatsapp data\n")
     
@@ -69,7 +69,7 @@ def prepare_data():
 def url_extract():
 
     """
-    This function automatically loads the chat data saved at raw_data/chat_data.txt
+    This function automatically loads the chat data saved at data/chat_data.txt
     and extracts the urls from the chats then exports it to processed_links/.
 
     It also keeps record of the latest date so that when ran on a new chat history,
@@ -77,12 +77,12 @@ def url_extract():
     '{earliest date}to{latest date}.csv'.
 
     To use this function, make sure the new chat data is renamed to 'chat_data.txt' and
-    is saved in the raw_data/ directory.
+    is saved in the data/ directory.
     """
     
-    file = open("raw_data/chat_data.txt", encoding = "utf8")
+    file = open("data/chat_data.txt", encoding = "utf8")
 
-    last_date = open("raw_data/latest_date.txt", encoding = "utf8")
+    last_date = open("data/latest_date.txt", encoding = "utf8")
 
     print("Reading whatsapp data\n")
     
@@ -128,7 +128,7 @@ def url_extract():
 
     if max(tidy_format.datetime) <= pd.to_datetime(last_record[0]):
         
-        print("Records are upto date!\nCheck if you updated the chat data at raw_data/chat_data.txt")
+        print("Records are upto date!\nCheck if you updated the chat data at data/chat_data.txt")
 
     else:
 
@@ -138,7 +138,7 @@ def url_extract():
 
         print("Updating latest date..\n")
         
-        with open('raw_data/latest_date.txt', 'w') as f:
+        with open('data/latest_date.txt', 'w') as f:
             f.write(str(latest_date))
 
         pattern = r"(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)"
