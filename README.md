@@ -6,6 +6,12 @@ After cloning this repo, make sure to create a new folder called "**data**" to s
 
 ![](C:/Users/Admin/AppData/Local/RStudio/tmp/paste-2C5C306A.png)
 
+Write a date to filter by in the last_date.txt file. If it is the first time you are running this, use a date that is before the earliest date. For example, if the earliest date in your chat history is **2020-04-12 09:34:21,** input a date earlier than that in the last_date.txt file.
+
+The last_date.txt looks like this.
+
+![](C:/Users/Admin/AppData/Local/RStudio/tmp/paste-9CE5EFBD.png)
+
 ## Instructions for Python
 
 After creating the data folder, run the url_extractor.py file.
