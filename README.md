@@ -2,7 +2,7 @@
 
 This repo contains codes developed in **R** and **Python** for extracting URLs sent in a Whatsapp Chat.
 
-After cloning this repo, make sure to create a new folder called "**data**" to store the exported WhatsApp chat data (**chat_data**) and to also store the time the last chat was sent. (**last_date**). All .**txt** files
+After cloning this repo, make sure to create a new folder called "**data**" in the R/Python folder to store the exported WhatsApp chat data (**chat_data**) and to also store the time the last chat was sent. (**last_date**). All .**txt** files
 
 ![](data_setup.png)
 
