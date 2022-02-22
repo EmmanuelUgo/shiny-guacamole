@@ -75,13 +75,13 @@ def url_extract():
         print("Extracting author and message...\n")
 
         tidy_format['id'] = range(1, 1+len(tidy_format))
-        tidy_format['datetime'] = pd.to_datetime(tidy_format.date + tidy_format.time, errors='coerce')
+        tidy_format['datetime'] = pd.to_datetime(tidy_format.date + tidy_format.time, errors='coerce', dayfirst=True)
 
         tidy_format = tidy_format[["id","datetime","author","message"]]
 
         print("Preparing dataframe...\n")
 
-        if max(tidy_format.datetime) <= pd.to_datetime(last_record[0]):
+        if max(tidy_format.datetime) <= pd.to_datetime(last_record[0], yearfirst=True):
             
             print("Records are upto date!\n\nCheck if you updated the chat data at data/chat_data.txt\n")
 
